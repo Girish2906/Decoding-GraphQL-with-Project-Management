@@ -8,11 +8,11 @@ const PORT = process.env.PORT || 3000;
 
 const app = express() ; 
 
+// graphiql is mainly to enable graphical user interface
+
 app.use('/graphql', graphqlHTTP({
     schema , 
     graphiql: true
-    // schema , 
-    // graphiql: process.env.NODE_ENV === 'development' ,
 }))
 
 connectDB().then(() => {

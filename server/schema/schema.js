@@ -118,6 +118,7 @@ const Mutation = new GraphQLObjectType({
     }
 })
 
+// this GraphQLSchema is used to define the structure of the GraphQL api
 module.exports = new GraphQLSchema({
     query: RootQuery , 
     mutation: Mutation
