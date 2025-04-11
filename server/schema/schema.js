@@ -71,7 +71,9 @@ const RootQuery = new GraphQLObjectType({
         book: {
             type: new GraphQLList(BookType) , 
             resolve( parent , args) {
-                return BookGraphQL.find()
+                const data =  BookGraphQL.find() ; 
+                console.log(76 , data) ; 
+                 return data ; 
                 // return books ; 
             }
         }  , 
